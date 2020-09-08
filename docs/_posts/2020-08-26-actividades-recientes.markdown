@@ -6,6 +6,12 @@ categories: jekyll update
 ---
 Desde que iniciamos actividades, hemos realizado algunos conversatorios y charlas.
 
+### La simulación basada en agentes como herramienta de investigación social
+Una introducción a la modelación y la simulación de fenómenos sociales, por David Anzola Ph.D. Escuela de administración de la Universidad del Rosario.
+
+*Cuándo:* Jueves 20 de agosto, 5:00 p.m.
+
+*Dónde:* Zoom y Facebook Live
 
 ### Twitter como una herramienta de investigación cualitativa
 Un análisis de la deshumanización del conflicto Turco-Kurdo, por Serhat Tutkal. Candidato a doctor en ciencias humanas y sociales por la Universidad Nacional de Colombia, Máster en ciencia política de la Universidad de Ankara.
