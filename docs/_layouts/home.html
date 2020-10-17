@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="content">
+        <div class="hero">
+
+            <div class="cover">
+                un espacio para el estudio y la experimentación en métodos digitales, presentando un conjunto de
+                problemas y perspectivas metodológicas para analizar la complejidad y heterogeneidad de la sociedad
+                digital.
+            </div>
+            
+        </div>
+</div>
+
+<h2>Últimas entradas</h2>
+
+<div class="ultimas-entradas">
+    {% for post in site.posts %}
+    <span class="meta-entrada">{{ post.date | date:"%d %b" }} </span> | <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+        <br />
+    {% endfor %}
+</div>

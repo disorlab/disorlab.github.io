@@ -1,0 +1,387 @@
+---
+---
+@import "{{ site.theme }}";
+
+/*        ORDEN                 */
+/*     1. Imports               */
+/*     2. Elementos generales   */
+/*     3. Header y nav          */
+/*     4. Footer                */
+/* [P] 5. Home                  */
+/* [P] 6. Proyectos             */
+/* [P] 7. Blog                  */
+
+
+/*-----------------------------------------*/
+/*            1. IMPORTS                   */
+/*-----------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&family=IBM+Plex+Mono:ital,wght@0,300;1,300&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+
+
+/*-----------------------------------------*/
+/*        2. ELEMENTOS GENERALES           */
+/*-----------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* min, preferred, max*/
+  font-family: "Fira Sans", Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+main {
+  width: clamp(40ch, 55vw, 70ch);
+  margin: auto;
+}
+
+.content {
+  margin-top: 2rem;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 2.2rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h2 {
+  display: inline-block;
+  font-size: 1.8rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 1rem 0 1rem 0;
+}
+
+h4 {
+  display: inline-block;
+  margin: 1rem 0 1rem 0; 
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: clamp(100%, 60vw, 50vw);
+  margin-top: 1rem;
+}
+
+figcaption {
+  font-family: "IBM Plex Mono";
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  border-left: 10px solid #ccc;
+  padding: 0.5rem 10px;
+}
+
+ol {
+  margin: 0px auto 1rem 0.8rem;
+}
+
+ul {
+  margin: 0px auto 1rem 0.8rem;
+  list-style-type: none;
+}
+
+/* custom li marker */
+ul li:before {
+  content: "\2014";
+  position: absolute;
+  margin-left: -25px;
+}
+
+li {
+  margin: 0px auto 0.7rem auto;
+}
+
+.titulo:before {
+  content: "»";
+  margin-right: 6px;
+}
+
+.titulo {
+  font-size: 2rem;
+  color: #b8b8b8;
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.video {
+  margin-bottom: 1rem;
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* TABLAS */
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto 1rem auto;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+table tr {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 0.35rem;
+}
+
+table th,
+table td {
+  padding: 0.625rem;
+  text-align: center;
+}
+
+table td {
+  font-family: "IBM Plex Mono";
+  font-size: 0.9rem;
+}
+
+table th {
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgb(88, 88, 88);
+}
+
+@media screen and (max-width: 900px) {
+  table td {
+    font-size: 0.8rem;
+    font-family: "IBM Plex Mono";
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3rem;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625rem;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8rem;
+    text-align: right;
+    font-family: "IBM Plex Mono";
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/*-----------------------------------------*/
+/*          3. HEADER Y NAV                */
+/*-----------------------------------------*/
+
+header {
+  margin: 0;
+  padding: 0 0 1rem 0;
+  border-bottom: 2px;
+  /* border-style: none none dashed none; */
+}
+
+header ul {
+  margin: 0;
+}
+
+header a {
+  color: #000;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+header .nav-links {
+  font-weight: 300;
+}
+
+header .nav-links ul {
+  list-style: none;
+  margin: 0;
+}
+
+header .nav-links li {
+  display: inline-block;
+  margin: 0 0.35rem 0 0;
+  list-style: none;
+}
+
+header ul li:before {
+  content: none;
+}
+
+/*-----------------------------------------*/
+/*            4. FOOTER                    */
+/*-----------------------------------------*/
+
+footer {
+  border-top: 2px;
+  border-style: dashed none none none;
+  margin: 1rem auto 1rem auto;
+  text-align: center;
+}
+
+.footer-description {
+  font-family: "IBM Plex Mono";
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+.footer-description p {
+  font-size: 0.7rem;
+}
+
+.footer-socialmedia a {
+  color: #000;
+  padding-bottom: 10px;
+}
+
+/*-----------------------------------------*/
+/*              5. HOME                    */
+/*-----------------------------------------*/
+
+.hero {
+  padding-top: 1rem;
+  text-align: left;
+}
+
+
+.cover {
+  font-size: clamp(1.4rem, 2.3rem, 2.8rem);
+  font-weight: 300;
+  padding-bottom: 3rem;
+}
+
+
+
+/*-----------------------------------------*/
+/*            6. PROYECTOS                 */
+/*-----------------------------------------*/
+
+.proyectos {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.box {
+  border: 5px;
+  border-style: solid;
+  border-color: #ccc;
+  padding: 10px;
+}
+
+.box p {
+  font-size: 90%;
+}
+
+/*-----------------------------------------*/
+/*                7. BLOG                  */
+/*-----------------------------------------*/
+
+.entrada {
+  margin: 0 0 1rem 0;
+}
+
+.meta-entrada {
+  font-family: 'IBM Plex Mono';
+  font-size: .75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.entrada h4 {
+  font-size: .9rem;
+  margin: 0 0 .3rem 0;
+}
+
+.entrada span {
+  font-size: .8rem;
+  font-style: italic;
+  margin: 0;
+}

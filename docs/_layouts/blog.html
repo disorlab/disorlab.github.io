@@ -1,0 +1,12 @@
+---
+layout: page
+---
+
+{% for post in site.posts  %}
+           <div class="ultimas-entradas">
+                   <div class="entrada">
+                    <span class="meta-entrada">{{ post.date | date:"%d %b" }} </span> | <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                    <span> {{ post.destacado | markdownify}} </span>
+                   </div>
+               </div>
+           {% endfor %}
