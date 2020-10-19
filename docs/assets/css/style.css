@@ -30,7 +30,7 @@
 }
 
 html {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* min, preferred, max*/
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* min, preferred, max*/
   font-family: "Fira Sans", Helvetica, sans-serif;
   font-weight: 300;
 }
