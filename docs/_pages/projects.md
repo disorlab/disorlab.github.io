@@ -32,4 +32,6 @@ title: proyectos
             <p>Sobre el impacto de tecnologías y dispositivos de cálculo predictivos en distintos dominios de la vida social.</p>
     </div>
 
+<!-- Agregar nuevo proyecto acá -->
+
 </div>
