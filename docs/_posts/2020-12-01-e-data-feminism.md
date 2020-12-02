@@ -36,7 +36,7 @@ El libro [Data Feminism](https://data-feminism.mitpress.mit.edu/) está disponib
 
 El Laboratorio en Métodos Digitales e Inventivos de Investigación Social (DisorLab).
 
-[Escuela de Ciencias Humanas](), Universidad del Rosairo.
+[Escuela de Ciencias Humanas](https://www.urosario.edu.co/Periodico-NovaEtVetera/Nuestra-U/Feminismo-de-datos-una-nueva-forma-de-pensar-sobre/), Universidad del Rosairo.
 
 **Invita:**
 
