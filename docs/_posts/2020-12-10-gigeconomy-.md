@@ -23,7 +23,6 @@ El siguiente cuadro resume las dimensiones de la economía digital y el lugar qu
 
 <figure>
     <img src="/assets/images/Entrada%20blog%201%20OJMC.jpg" alt="Dimensiones de la economía digital">
-    <figcaption>"Reelaboración basada en Bukht y Heeks, 2017"</figcaption>
 </figure>
  
 
